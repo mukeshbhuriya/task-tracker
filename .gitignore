@@ -1,0 +1,36 @@
+# Ignore node_modules everywhere
+**/node_modules/
+
+# Logs globally
+**/*.log
+
+# Environment files across backend/frontend
+**/.env
+**/.env.*
+!/.env.example
+!/backend/.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+
+# Docker local files
+docker-compose.override.yml
+
+# MySQL local volume (if not using bind mounts)
+mysql-data/
+mysql/
+db_data/
+
+# Archives
+*.zip
+*.tar.gz
+
+# Certificates
+*.pem
+*.crt
+*.key
