@@ -1,5 +1,10 @@
 # Task Tracker Lite - Full Stack (MySQL + Node + React)
 
+## 🎥 Demo Video
+
+[![Demo Video](https://img.youtube.com/vi/uPl3lDk41xI/0.jpg)](https://youtube.com/watch?v=uPl3lDk41xI)
+
+
 This repository contains a full-stack implementation for the Task Tracker Lite assignment.
 
 Services:
@@ -8,9 +13,8 @@ Services:
 - Frontend: React (development server)
 
 Run:
-1. Copy `backend/.env.example` to `backend/.env` and adjust if needed.
-2. Run `docker-compose up --build`
-3. Frontend: http://localhost:3000
+1. Run `docker-compose up --build`
+2. Frontend: http://localhost:3000
    Backend API: http://localhost:5000
 
 Seed admin:
