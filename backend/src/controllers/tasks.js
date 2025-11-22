@@ -68,4 +68,32 @@ const updateTask = async (req, res) => {
   }
 };
 
-module.exports = { createTask, listMyTasks, updateTask, getMyTask };
+const updateStatus = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+
+    const task = await Task.findOne({
+      where: { id, assigned_to: req.user.id },
+    });
+
+    if (!task) return res.status(404).json({ error: "Not found" });
+
+    if (new Date() > new Date(task.due_date)) {
+      return res
+        .status(400)
+        .json({ error: "Cannot change status after due date" });
+    }
+
+    task.status = status;
+    await task.save();
+
+    return res.json(task);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Server error" });
+  }
+};
+
+
+module.exports = { createTask, listMyTasks, updateTask, getMyTask, updateStatus };
