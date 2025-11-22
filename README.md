@@ -19,5 +19,3 @@ Run:
 
 Seed admin:
 - After backend is up, exec into backend container and run `npm run seed` or run the seed script locally.
-
-Assignment PDF used: /mnt/data/Sharp And Tannan Task for Full Stack Developer.pdf
